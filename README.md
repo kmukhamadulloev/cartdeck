@@ -1,19 +1,9 @@
-# CartDeck
-
 <p align="center">
-  <img src="./src/assets/images/logo.png" alt="CartDeck logo" width="220" />
-</p>
-
-<p align="center">
-  <img src="./src/assets/images/favicon.png" alt="CartDeck favicon" width="56" />
+  <img src="./src/assets/images/main.png" alt="CartDeck user interface preview" width="920" />
 </p>
 
 <p align="center">
   A local-first retro cartridge deck for importing, organizing, and playing your own <code>.gb</code> and <code>.gbc</code> ROMs right in the browser.
-</p>
-
-<p align="center">
-  <img src="./src/assets/images/ui.jpg" alt="CartDeck user interface preview" width="920" />
 </p>
 
 ## What CartDeck Is
@@ -66,15 +56,15 @@ The README uses project images from [`src/assets/images/`](./src/assets/images/)
 
 CartDeck binds keyboard input directly to the emulator joypad.
 
-| Action | Key |
-| --- | --- |
-| Up | `ArrowUp` |
-| Right | `ArrowRight` |
-| Down | `ArrowDown` |
-| Left | `ArrowLeft` |
-| A | `Z` |
-| B | `X` |
-| Start | `Enter` |
+| Action | Key                           |
+| ------ | ----------------------------- |
+| Up     | `ArrowUp`                     |
+| Right  | `ArrowRight`                  |
+| Down   | `ArrowDown`                   |
+| Left   | `ArrowLeft`                   |
+| A      | `Z`                           |
+| B      | `X`                           |
+| Start  | `Enter`                       |
 | Select | `Left Shift` or `Right Shift` |
 
 ## On-Screen Controls
