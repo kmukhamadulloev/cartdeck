@@ -31,14 +31,6 @@ CartDeck does **not** provide ROMs, BIOS files, firmware, or download links.
 - Customize theme, background, and motion settings
 - Keep using the app even if the remote updates feed is unavailable
 
-## Preview Assets
-
-The README uses project images from [`src/assets/images/`](./src/assets/images/):
-
-- [`logo.png`](./src/assets/images/logo.png)
-- [`favicon.png`](./src/assets/images/favicon.png)
-- [`ui.jpg`](./src/assets/images/ui.jpg)
-
 ## How To Play
 
 1. Install dependencies and start the dev server.
@@ -172,11 +164,6 @@ npm run build
 - Import only files and artwork you have the right to use.
 - CartDeck does not distribute games.
 - CartDeck intentionally avoids official platform branding and copyrighted ROM bundles.
-
-## Assets
-
-- Runtime images: `src/assets/images/`
-- Optional local fonts: `src/assets/fonts/`
 
 <details>
 <summary>Quick command reference</summary>
