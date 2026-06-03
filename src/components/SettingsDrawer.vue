@@ -20,6 +20,12 @@ const themeOptions = [
   { label: 'Dark', value: 'dark' },
   { label: 'Light', value: 'light' },
 ]
+const consoleThemeOptions = [
+  { label: 'Gray', value: 'gray' },
+  { label: 'Indigo', value: 'indigo' },
+  { label: 'Yellow', value: 'yellow' },
+  { label: 'Orange', value: 'orange' },
+]
 const backgroundOptions = [
   { label: 'Default', value: 'default' },
   { label: 'Pixel Grid', value: 'pixel-grid' },
@@ -155,6 +161,18 @@ async function confirm() {
                     :model-value="settings.selectedTheme.value"
                     :options="themeOptions"
                     @update:model-value="settings.setTheme"
+                  />
+                </div>
+                <div
+                  class="border-b p-0"
+                  :class="isDarkTheme ? 'border-b-white/10' : 'border-b-slate-200'"
+                >
+                  <SettingsSelect
+                    label="Console theme"
+                    :dark="isDarkTheme"
+                    :model-value="settings.consoleTheme.value"
+                    :options="consoleThemeOptions"
+                    @update:model-value="settings.setConsoleTheme"
                   />
                 </div>
                 <SettingsSelect

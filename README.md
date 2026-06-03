@@ -89,28 +89,12 @@ npm install
 npm run dev
 ```
 
-CartDeck runs on:
-
-```txt
-http://0.0.0.0:5173
-```
-
 ## Quality Checks
 
 ```sh
 npm run lint
 npm run build
 ```
-
-## Tech Stack
-
-- Vue 3
-- Vite
-- Vue Router
-- Dexie / IndexedDB
-- WasmBoy
-- Tailwind CSS
-- Custom retro console styling in `src/assets/styles/console.css`
 
 ## Project Flow
 
@@ -123,41 +107,10 @@ npm run build
 - Delete cartridges from local storage
 - See the latest remote project updates when available
 
-### Emulator
-
-- Automatically loads the latest selected cartridge
-- Connects keyboard and pointer input to the joypad
-- Attempts autoplay after ROM load
-- Falls back gracefully if autoplay is blocked by the browser
-- Supports reset, mute, and save-state actions
-
-### Settings
-
-- Theme: `System`, `Dark`, `Light`
-- Backgrounds: `Default`, `Pixel Grid`, `Neon Dungeon`, `Green LCD`, `Dark Arcade`
-- Motion: `Full`, `Reduced`
-- Upload a custom wallpaper image
-- Request persistent browser storage
-- Clear ROMs or all local CartDeck data
-
-## Architecture Overview
-
-- `src/router/index.js`: app routes and redirects to `/library`
-- `src/db/cartdeckDb.js`: Dexie schema for ROMs, settings, and saves
-- `src/composables/useRomLibrary.js`: ROM CRUD, deduplication, and latest-ROM lookup
-- `src/composables/useSettings.js`: persisted UI and latest-ROM settings
-- `src/composables/useUpdates.js`: remote updates feed with timeout and fallback handling
-- `src/composables/useEmulator.js`: WasmBoy adapter for init, ROM loading, playback, reset, mute, and save/load state
-- `src/composables/useKeyboardControls.js`: keyboard-to-joypad mapping
-- `src/components/GameConsole.vue`: on-screen retro handheld UI and pointer controls
-
 ## Important Notes
 
 - CartDeck is local-first and does not upload ROMs, saves, artwork, or backgrounds to a backend.
-- Remote fetching is limited to the optional updates feed at `https://cartdeck.stacknstress.com/news/updates.json`.
-- WasmBoy is an older emulator package, so browser behavior can vary.
 - Save/load state actions are shown only when the current emulator API supports them.
-- If a ROM fails to load, the app keeps the interface usable and shows a friendly error.
 
 ## Legal
 

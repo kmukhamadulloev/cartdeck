@@ -13,6 +13,58 @@
   --accent: #73e0ff;
   --danger: #ff6f91;
   --success: #74f0b4;
+  --console-shell-start: #4f4f4f;
+  --console-shell-end: #b1b1b1;
+  --console-shell-highlight: rgba(255, 255, 255, 0.6);
+  --console-shell-shadow: rgba(0, 0, 0, 0.5);
+  --console-label: #6f6f6f;
+  --console-label-border: #6f6f6f;
+  --cartridge-fallback-overlay: radial-gradient(circle at top, rgba(115, 224, 255, 0.3), transparent 35%);
+  --cartridge-fallback-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  --cartridge-fallback-base: linear-gradient(135deg, #10203f, #18284f 55%, #0d1630);
+  --cartridge-fallback-text: rgba(255, 255, 255, 0.96);
+  --emu-toolbar-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  --emu-toolbar-border: rgba(255, 255, 255, 0.14);
+  --emu-toolbar-button-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  --emu-toolbar-button-bg-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  --emu-toolbar-button-border: rgba(255, 255, 255, 0.18);
+  --emu-toolbar-icon: rgba(255, 247, 225, 0.96);
+}
+
+.console-theme-gray {
+  --console-shell-start: #4f4f4f;
+  --console-shell-end: #b1b1b1;
+  --console-shell-highlight: rgba(255, 255, 255, 0.6);
+  --console-shell-shadow: rgba(0, 0, 0, 0.5);
+  --console-label: #6f6f6f;
+  --console-label-border: #6f6f6f;
+}
+
+.console-theme-indigo {
+  --console-shell-start: #4b5aa6;
+  --console-shell-end: #a9b8ff;
+  --console-shell-highlight: rgba(232, 238, 255, 0.68);
+  --console-shell-shadow: rgba(30, 42, 92, 0.58);
+  --console-label: #42518f;
+  --console-label-border: #42518f;
+}
+
+.console-theme-yellow {
+  --console-shell-start: #b88d1e;
+  --console-shell-end: #f4d76d;
+  --console-shell-highlight: rgba(255, 248, 214, 0.72);
+  --console-shell-shadow: rgba(103, 74, 5, 0.52);
+  --console-label: #7a5a09;
+  --console-label-border: #7a5a09;
+}
+
+.console-theme-orange {
+  --console-shell-start: #bf5d2f;
+  --console-shell-end: #f2ad67;
+  --console-shell-highlight: rgba(255, 232, 204, 0.7);
+  --console-shell-shadow: rgba(111, 44, 12, 0.54);
+  --console-label: #88411c;
+  --console-label-border: #88411c;
 }
 
 .theme-light {
@@ -27,6 +79,16 @@
   --accent: #0ea5e9;
   --danger: #e11d48;
   --success: #059669;
+  --cartridge-fallback-overlay: radial-gradient(circle at top, rgba(14, 165, 233, 0.42), transparent 36%);
+  --cartridge-fallback-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.06));
+  --cartridge-fallback-base: linear-gradient(135deg, #3b82f6, #60a5fa 46%, #1d4ed8);
+  --cartridge-fallback-text: #f8fbff;
+  --emu-toolbar-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(230, 238, 250, 0.34));
+  --emu-toolbar-border: rgba(148, 163, 184, 0.26);
+  --emu-toolbar-button-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(216, 228, 246, 0.52));
+  --emu-toolbar-button-bg-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(191, 219, 254, 0.62));
+  --emu-toolbar-button-border: rgba(148, 163, 184, 0.3);
+  --emu-toolbar-icon: #31507f;
 }
 
 html,
@@ -187,6 +249,15 @@ textarea {
   border-color: var(--glass-border);
   color: var(--text-secondary);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.cartridge-card__fallback {
+  background:
+    var(--cartridge-fallback-overlay),
+    var(--cartridge-fallback-sheen),
+    var(--cartridge-fallback-base);
+  color: var(--cartridge-fallback-text);
+  text-shadow: 0 2px 12px rgba(15, 23, 42, 0.28);
 }
 
 .status-note {

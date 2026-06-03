@@ -15,9 +15,9 @@
   padding-top: max(10px, env(safe-area-inset-top));
   padding-inline: 14px;
   padding-bottom: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--emu-toolbar-border);
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  background: var(--emu-toolbar-bg);
   box-shadow:
     0 16px 36px rgba(0, 0, 0, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -50,14 +50,14 @@
 .emu-layout .console {
   position: relative;
   border-radius: 20% 20% 49% 49% / 2% 2% 6.5% 6.5%;
-  background-image: linear-gradient(to right bottom, #4f4f4f, #b1b1b1);
+  background-image: linear-gradient(to right bottom, var(--console-shell-start), var(--console-shell-end));
   width: 97vw;
   max-width: 28rem;
   aspect-ratio: 10 / 17;
   margin: auto;
   box-shadow:
-    inset 1px 5px 5px -1px #fff9,
-    inset -1px -2px 5px -1px #00000080,
+    inset 1px 5px 5px -1px var(--console-shell-highlight),
+    inset -1px -2px 5px -1px var(--console-shell-shadow),
     0 1px 1px #00000013,
     0 2px 2px #00000014,
     0 4px 4px #0000001a,
@@ -85,7 +85,7 @@
   text-shadow:
     -1px -1px 1.2px rgba(255, 255, 255, 0.5),
     1px 1px 1px rgba(1, 1, 1, 0.07);
-  color: #6f6f6f;
+  color: var(--console-label);
 }
 
 .emu-layout .screen {
@@ -146,9 +146,9 @@
   width: 29%;
   border-radius: 45px;
   height: 4.3%;
-  border: 2px solid #6f6f6f;
+  border: 2px solid var(--console-label-border);
   font-size: 1.2rem;
-  color: #6f6f6f;
+  color: var(--console-label);
   text-shadow:
     -1px -1px 1.2px rgba(255, 255, 255, 0.5),
     1px 1px 1px rgba(1, 1, 1, 0.07);
@@ -165,9 +165,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
-  color: rgba(255, 247, 225, 0.96);
+  border: 1px solid var(--emu-toolbar-button-border);
+  background: var(--emu-toolbar-button-bg);
+  color: var(--emu-toolbar-icon);
   cursor: pointer;
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.18),
@@ -187,7 +187,7 @@
 }
 
 .emu-layout .icon-button:hover:not(:disabled) {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  background: var(--emu-toolbar-button-bg-hover);
   box-shadow:
     0 10px 22px rgba(0, 0, 0, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.24);

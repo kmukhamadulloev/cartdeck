@@ -46,7 +46,7 @@ const title = computed(() => getDisplayTitle(props.rom))
       />
       <div
         v-else
-        class="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(115,224,255,0.3),_transparent_35%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.02)),linear-gradient(135deg,_#10203f,_#18284f_55%,_#0d1630)] p-6 text-center text-2xl font-semibold tracking-tight text-white"
+        class="cartridge-card__fallback flex h-full w-full items-center justify-center p-6 text-center text-2xl font-semibold tracking-tight"
       >
         {{ title }}
       </div>

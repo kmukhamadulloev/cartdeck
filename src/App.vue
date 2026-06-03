@@ -33,6 +33,7 @@ const resolvedTheme = computed(() => {
 const appClasses = computed(() => [
   'app-shell',
   resolvedTheme.value,
+  `console-theme-${settings.consoleTheme.value}`,
   `animation-${settings.animationMode.value}`,
   background.backgroundClass.value,
   { 'app-shell--emu': route.name === 'emulator' },

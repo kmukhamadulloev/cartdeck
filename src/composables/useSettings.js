@@ -5,6 +5,7 @@ import { cartdeckDb } from '@/db/cartdeckDb'
 const DEFAULT_SETTINGS = {
   latestRomId: null,
   selectedTheme: 'system',
+  consoleTheme: 'gray',
   selectedBackgroundKey: 'default',
   customBackgroundBlob: null,
   animationMode: 'full',
@@ -16,6 +17,7 @@ const isSettingsOpen = ref(false)
 const state = {
   latestRomId: ref(DEFAULT_SETTINGS.latestRomId),
   selectedTheme: ref(DEFAULT_SETTINGS.selectedTheme),
+  consoleTheme: ref(DEFAULT_SETTINGS.consoleTheme),
   selectedBackgroundKey: ref(DEFAULT_SETTINGS.selectedBackgroundKey),
   customBackgroundBlob: ref(DEFAULT_SETTINGS.customBackgroundBlob),
   animationMode: ref(DEFAULT_SETTINGS.animationMode),
@@ -52,6 +54,11 @@ export function useSettings() {
   async function setTheme(theme) {
     state.selectedTheme.value = theme
     await saveSetting('selectedTheme', theme)
+  }
+
+  async function setConsoleTheme(theme) {
+    state.consoleTheme.value = theme
+    await saveSetting('consoleTheme', theme)
   }
 
   async function setBackgroundKey(key) {
@@ -99,6 +106,7 @@ export function useSettings() {
     isSettingsOpen,
     latestRomId: state.latestRomId,
     selectedTheme: state.selectedTheme,
+    consoleTheme: state.consoleTheme,
     selectedBackgroundKey: state.selectedBackgroundKey,
     customBackgroundBlob: state.customBackgroundBlob,
     animationMode: state.animationMode,
@@ -106,6 +114,7 @@ export function useSettings() {
     ensureLoaded,
     setLatestRomId,
     setTheme,
+    setConsoleTheme,
     setBackgroundKey,
     setCustomBackgroundBlob,
     setAnimationMode,
